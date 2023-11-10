@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChatRPG - Unleash Your Imagination</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #c8c8c8;
+    }
+
+    header {
+      background-color: #1a1a1a;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #1a1a1a;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+    }
+
+    h1, h2, label {
+        color: #fff;
+        font-weight: 700;
+    }
+
+    h3, p, li {
+        color: #b9b9b9;
+    }
+
+    /* main cta page */
+
+    form {
+        width: 100%;
+
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+
+    button {
+      background-color: #144f92;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 1.25rem;
+      transition: all 0.5s ease;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    /* images */
+    img {
+      height: auto;
+      border-radius: 8px;
+
+      width: 250px;
+      height: 250px;
+    }
+
+    #image-galery {
+        width: 100%;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* audio */
+    audio {
+        margin-top: 1rem;
+    }
+
+    /* footer */
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #1a1a1a;
+      color: #fff;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+
+      display: none;
+    }
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Embark on Your Epic Journey with ChatRPG</h1>
+    <p>Unleash Your Imagination in a Truly Customizable Text-Adventure Game</p>
+  </header>
+
+  <section id="f-cta">
+    <h2>Be the first one to get access</h2>
+    <form action="https://formspree.io/f/xgejqglq" method="POST">
+        <label>
+            Your email:
+        </label>
+        <input type="email" name="email">
+        <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <section id="introduction">
+    <h2>the only limit is your imagination</h2>
+    <p>unlimited customizability, endless possibilities</p>
+  </section>
+
+  <section id="visual-showcase">
+    <h2>Engage with over 50 AI-generated enemies</h2>
+    <div id="image-galery">
+        <img src="./assets/images/wendigo.png" alt="Screenshot 2">
+        <img src="./assets/images/treant.png" alt="Screenshot 1">
+        <img src="./assets/images/gnome.png" alt="Screenshot 2">
+    </div>
+    <!-- Add more images or captions here -->
+  </section>
+
+  <section id="ambient-showcase">
+    <h2>Explore the magical realms accompanied by ambient music</h2>
+    <img src="./assets/images/mushroom.png" alt="Screenshot 3">
+    <audio controls src="./assets/images/music.mp3"></audio>
+  </section>
+
+  <section id="narrator-showcase">
+    <h2>Be guided by a mysterious narrator</h2>
+    <audio controls src="./assets/images/music.mp3"></audio>
+  </section>
+
+  <section id="s-cta">
+    <h2>What are you waiting for? Sign up!</h2>
+    <form action="https://formspree.io/f/xgejqglq" method="POST">
+        <label>
+            Your email:
+        </label>
+        <input type="email" name="email">
+        <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- Add more sections following a similar structure -->
+
+  <footer>
+    <p>&copy; 2023 ChatRPG. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+  </footer>
+
+</body>
+</html>
