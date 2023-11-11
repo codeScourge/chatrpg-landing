@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ChatRPG - Unleash Your Imagination</title>
   <style>
+    :root {
+      --dgrey: #1a1a1a;
+    }
     * {
       text-align: center;
     }
@@ -20,7 +23,7 @@
     }
 
     header {
-      background-color: #1a1a1a;
+      background-color: var(--dgrey);
       color: #fff;
       text-align: center;
       padding: 20px;
@@ -28,27 +31,34 @@
 
     section {
       max-width: 800px;
-      margin: 20px auto;
+      margin: 50px auto;
       padding: 20px;
-      background-color: #1a1a1a;
+      background-color: var(--dgrey);
       border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
 
       display: flex;
       flex-flow: column;
       align-items: center;
+
     }
 
-    h1, h2, label {
-        color: #fff;
-        font-weight: 700;
+    /* text */
+
+    h1 {
+      color: #fff;
+    }
+
+    h2, label {
+        color: #dbdbdb;
     }
 
     p, li {
         color: #b9b9b9;
     }
 
-    h3 {
+    h3, h4, h5 {
       color: #e9e8e8;
       font-weight: 400;
     }
@@ -64,7 +74,7 @@
     }
 
     button {
-      background-color: #144f92;
+      background-color: rgb(124, 17, 38);
       color: #fff;
       padding: 10px 20px;
       border: none;
@@ -80,33 +90,19 @@
     }
 
     /* character showcase */
-    .character {
-      width: 100%;
 
-      display: flex;
-      flex-flow: row;
-      align-items: flex-start;
-      justify-content: space-between;
-    }
-
-    .character__column {
-      width: 15rem;
-      display:flex;
-      flex-flow: column;
-      align-items: center;
-      justify-content: center;
-    }
 
     /* images */
     img {
       height: auto;
       border-radius: 8px;
+      border: 1px solid white;
 
       width: 250px;
       height: 250px;
     }
 
-    #image-galery {
+    .image-galery {
         width: 100%;
         display: flex;
         flex-flow: row;
@@ -114,129 +110,99 @@
         justify-content: space-between;
     }
 
+    .column {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+    }
+
     /* audio */
     audio {
         margin-top: 1rem;
+        display: none;
     }
 
-      /* Customize the audio player */
-    audio::-webkit-media-controls-panel {
-      background-color: black;
-      color: white;
-      border: 2px solid white;
+    .hover {
+      cursor: pointer;
     }
 
-    audio::-webkit-media-controls-play-button,
-    audio::-webkit-media-controls-volume-slider,
-    audio::-webkit-media-controls-mute-button,
-    audio::-webkit-media-controls-timeline,
-    audio::-webkit-media-controls-current-time-display,
-    audio::-webkit-media-controls-time-remaining-display {
-      filter: brightness(2) invert(1);
-    }
-
-    /* Hide the default shadow on focus */
-    audio::-webkit-media-controls-enclosure {
-      box-shadow: none;
+    /* email-input */
+    input[type="email"] {
+      border-radius: 5px;
       border: none;
     }
-
-    /* footer */
-    footer {
-      text-align: center;
-      padding: 10px;
-      background-color: #1a1a1a;
-      color: #fff;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-
-      display: none;
-    }
-
-
   </style>
 </head>
 <body>
   <header>
     <h1>Embark on Your Epic Journey with ChatRPG</h1>
-    <p>Unleash Your Imagination in a Truly Customizable Text-Adventure Game</p>
+    <p>Unleash Your Imagination in a Truly Customizable Text-Adventure Game with endless possibilities and customizations</p>
   </header>
 
-  <section id="introduction">
-    <h2>the only limit is your imagination</h2>
-    <p>unlimited customizability, endless possibilities</p>
-  </section>
+  <main>
+    <section id="f-cta">
+      <h2>Be the first one to gain access</h2>
+      <form action="https://formspree.io/f/xgejqglq" method="POST">
+          <input type="email" name="email" placeholder="example@mail.com">
+          <button type="submit">submit</button>
+      </form>
+    </section>
 
-  <section id="f-cta">
-    <h2>Be the first one to get access</h2>
-    <form action="https://formspree.io/f/xgejqglq" method="POST">
-        <label>
-            Your email:
-        </label>
-        <input type="email" name="email">
-        <button type="submit">Send</button>
-    </form>
-  </section>
-
-  <section id="visual-showcase">
-    <h2>Engage with over 50 AI-generated enemies</h2>
-    <div id="image-galery">
-        <img src="./assets/images/wendigo.png" alt="Screenshot 2">
-        <img src="./assets/images/treant.png" alt="Screenshot 1">
-        <img src="./assets/images/gnome.png" alt="Screenshot 2">
-    </div>
-    <!-- Add more images or captions here -->
-  </section>
-
-  <section id="ambient-showcase">
-    <h2>Explore the magical realms accompanied by ambient music</h2>
-    <img src="./assets/images/mushroom.png" alt="Screenshot 3">
-    <audio controls src="./assets/images/music.mp3"></audio>
-  </section>
-
-  <section id="narrator-showcase"> <!--  -->
-    <h2>Be guided by a mysterious narrator</h2>
-    <audio controls src="./assets/images/narrator.mp3"></audio>
-  </section>
-
-  <section id="character-showcase"> <!--  -->
-    <h2>let AI turn your description into a deep and interesting character</h2>
-    <div class="character">
-      <div class="character__column">
-        <h3>backstory</h3>
-        <p>In a world teeming with monstrous creatures, a battle-hardened jellyfish tamer and magician named Marina emerges, wielding their mastery over both sea and magic to protect the inhabitants from the relentless onslaught of the beasts.</p>
+    <section id="visual-showcase">
+      <h2>Engage with over 50 AI-generated enemies</h2>
+      <div class="image-galery">
+          <img src="./assets/images/wendigo.png" alt="Screenshot 2">
+          <img src="./assets/images/treant.png" alt="Screenshot 1">
+          <img src="./assets/images/gnome.png" alt="Screenshot 2">
       </div>
-      <div class="character__column">
-        <h3>abilties</h3>
-        <p>With an uncanny command over jellyfish and a formidable arsenal of magical spells, Marina possesses the power to both mesmerize and obliterate their enemies.</p>
+      <!-- Add more images or captions here -->
+    </section>
+
+    <section>
+      <h2>Explore the magical realms accompanied by ambient music and a mysterious narrator</h2>
+      <div class="image-galery">
+        <img src="./assets/images/mushroom.png" alt="Screenshot 3">
+        <div class="column">
+          <audio id="ambient-player" controls src="./assets/images/music.mp3"></audio>
+          <button class="hover" id="ambient-hover">hover for ambience</button>
+
+          <audio id="narrator-player" controls src="./assets/images/narrator.mp3"></audio>
+          <button class="hover" id="narrator-hover">hover for narrator</button>
+        </div>
+        <img src="./assets/images/red_desert.png" alt="Screenshot 4">
       </div>
-      <div class="character__column">
-        <h3>quirks</h3>
-        <p>Marina has a peculiar fondness for collecting unique jellyfish specimens and has a habit of speaking in riddles and cryptic phrases.</p>
-      </div>
-    </div>
 
-    <h3>goal</h3>
-    <p>Driven by a deep desire to uncover the lost secrets of the ancient jellyfish civilization, this battle-hardened individual embarks on a perilous quest to find the mythical Jellystone, rumored to hold the key to unlocking the true potential of their jellyfish companions. Having witnessed the devastating power of the jellyfish firsthand, the character became obsessed with unraveling their mysteries and dedicated their life to studying and protecting these enigmatic creatures.	</p>
-  </section>
+    </section>
 
-  <section id="s-cta">
-    <h2>What are you waiting for? Sign up!</h2>
-    <form action="https://formspree.io/f/xgejqglq" method="POST">
-        <label>
-            Your email:
-        </label>
-        <input type="email" name="email">
-        <button type="submit">Send</button>
-    </form>
-  </section>
 
-  <!-- Add more sections following a similar structure -->
+    <section id="s-cta">
+      <h2>What are you waiting for? Sign up!</h2>
+      <form action="https://formspree.io/f/xgejqglq" method="POST">
+          <input type="email" name="email" placeholder="example@mail.com">
+          <button type="submit">submit</button>
+      </form>
+    </section>
+  </main>
 
-  <footer>
-    <p>&copy; 2023 ChatRPG. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
-  </footer>
+  <script>
+    document.getElementById("narrator-hover").addEventListener("mouseover", () => {
+      document.getElementById("narrator-player").play()
+      console.log("playing")
+    })
+    document.getElementById("narrator-hover").addEventListener("mouseout", () => {
+      document.getElementById("narrator-player").pause()
+      console.log("stopping")
+    })
 
+    document.getElementById("ambient-hover").addEventListener("mouseover", () => {
+      document.getElementById("ambient-player").play()
+      console.log("playing")
+    })
+    document.getElementById("ambient-hover").addEventListener("mouseout", () => {
+      document.getElementById("ambient-player").pause()
+      console.log("stopping")
+    })
+  </script>
 </body>
 </html>
