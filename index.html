@@ -5,11 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ChatRPG - Unleash Your Imagination</title>
   <style>
+    * {
+      text-align: center;
+    }
+
     body {
       font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #c8c8c8;
+      background-image: url("./assets/images/forest.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
     }
 
     header {
@@ -37,8 +44,13 @@
         font-weight: 700;
     }
 
-    h3, p, li {
+    p, li {
         color: #b9b9b9;
+    }
+
+    h3 {
+      color: #e9e8e8;
+      font-weight: 400;
     }
 
     /* main cta page */
@@ -67,6 +79,24 @@
       transform: scale(1.05);
     }
 
+    /* character showcase */
+    .character {
+      width: 100%;
+
+      display: flex;
+      flex-flow: row;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    .character__column {
+      width: 15rem;
+      display:flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+    }
+
     /* images */
     img {
       height: auto;
@@ -87,6 +117,28 @@
     /* audio */
     audio {
         margin-top: 1rem;
+    }
+
+      /* Customize the audio player */
+    audio::-webkit-media-controls-panel {
+      background-color: black;
+      color: white;
+      border: 2px solid white;
+    }
+
+    audio::-webkit-media-controls-play-button,
+    audio::-webkit-media-controls-volume-slider,
+    audio::-webkit-media-controls-mute-button,
+    audio::-webkit-media-controls-timeline,
+    audio::-webkit-media-controls-current-time-display,
+    audio::-webkit-media-controls-time-remaining-display {
+      filter: brightness(2) invert(1);
+    }
+
+    /* Hide the default shadow on focus */
+    audio::-webkit-media-controls-enclosure {
+      box-shadow: none;
+      border: none;
     }
 
     /* footer */
@@ -111,6 +163,11 @@
     <p>Unleash Your Imagination in a Truly Customizable Text-Adventure Game</p>
   </header>
 
+  <section id="introduction">
+    <h2>the only limit is your imagination</h2>
+    <p>unlimited customizability, endless possibilities</p>
+  </section>
+
   <section id="f-cta">
     <h2>Be the first one to get access</h2>
     <form action="https://formspree.io/f/xgejqglq" method="POST">
@@ -120,11 +177,6 @@
         <input type="email" name="email">
         <button type="submit">Send</button>
     </form>
-  </section>
-
-  <section id="introduction">
-    <h2>the only limit is your imagination</h2>
-    <p>unlimited customizability, endless possibilities</p>
   </section>
 
   <section id="visual-showcase">
@@ -146,6 +198,27 @@
   <section id="narrator-showcase"> <!--  -->
     <h2>Be guided by a mysterious narrator</h2>
     <audio controls src="./assets/images/narrator.mp3"></audio>
+  </section>
+
+  <section id="character-showcase"> <!--  -->
+    <h2>let AI turn your description into a deep and interesting character</h2>
+    <div class="character">
+      <div class="character__column">
+        <h3>backstory</h3>
+        <p>In a world teeming with monstrous creatures, a battle-hardened jellyfish tamer and magician named Marina emerges, wielding their mastery over both sea and magic to protect the inhabitants from the relentless onslaught of the beasts.</p>
+      </div>
+      <div class="character__column">
+        <h3>abilties</h3>
+        <p>With an uncanny command over jellyfish and a formidable arsenal of magical spells, Marina possesses the power to both mesmerize and obliterate their enemies.</p>
+      </div>
+      <div class="character__column">
+        <h3>quirks</h3>
+        <p>Marina has a peculiar fondness for collecting unique jellyfish specimens and has a habit of speaking in riddles and cryptic phrases.</p>
+      </div>
+    </div>
+
+    <h3>goal</h3>
+    <p>Driven by a deep desire to uncover the lost secrets of the ancient jellyfish civilization, this battle-hardened individual embarks on a perilous quest to find the mythical Jellystone, rumored to hold the key to unlocking the true potential of their jellyfish companions. Having witnessed the devastating power of the jellyfish firsthand, the character became obsessed with unraveling their mysteries and dedicated their life to studying and protecting these enigmatic creatures.	</p>
   </section>
 
   <section id="s-cta">
